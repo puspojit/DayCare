@@ -8,22 +8,18 @@
 </head>
 <body>
 
-<!-- HERO SECTION -->
-<header class="hero">
-  <div class="hero-content">
-    <img src="hero.jpg" alt="Happy children playing">
-    <h1>Trusted Daycare & Babysitters in GTA</h1>
-    <p>Find licensed daycares, home daycares, and babysitters with real availability in Toronto, Brampton, Mississauga & Scarborough.</p>
-    <div class="hero-buttons">
-      <a href="#parents-form" class="btn btn-primary">Find Daycare Near Me</a>
-      <a href="#provider-form" class="btn btn-secondary">List Your Daycare – Free Early Access</a>
-    </div>
-    <span class="small-text">Launching soon • Early providers get premium visibility</span>
-  </div>
-</header>
+<!-- HERO -->
+<div class="hero">
+  <img src="hero.jpg" alt="Happy children playing">
+  <h1>Find Trusted Daycare & Babysitters in GTA</h1>
+  <p>Search licensed daycares, home daycares, and babysitters with real availability in Toronto, Brampton, Mississauga & Scarborough.</p>
+  <a href="#parents-form" class="btn btn-primary">Find Daycare Near Me</a>
+  <a href="#provider-form" class="btn btn-secondary">List Your Daycare – Free Early Access</a>
+  <span class="small">Launching soon • Early providers get premium visibility</span>
+</div>
 
 <!-- PARENTS INFO -->
-<section class="info-section">
+<section>
   <div class="container">
     <h2>Finding childcare shouldn’t feel impossible</h2>
     <ul>
@@ -37,7 +33,7 @@
 </section>
 
 <!-- PROVIDERS INFO -->
-<section class="info-section">
+<section>
   <div class="container">
     <h2>Get discovered by parents actively looking for childcare</h2>
     <ul>
@@ -47,12 +43,12 @@
       <li>Licensed and verified badges (optional)</li>
       <li>Show real availability to parents</li>
     </ul>
-    <span class="small-text">No credit card required • Cancel anytime</span>
+    <span class="small">No credit card required • Cancel anytime</span>
   </div>
 </section>
 
 <!-- WHY DIFFERENT -->
-<section class="info-section">
+<section>
   <div class="container">
     <h2>Built specifically for GTA families and childcare providers</h2>
     <div class="three-columns">
@@ -83,7 +79,7 @@
 </section>
 
 <!-- FORMS -->
-<section class="form-section">
+<section>
   <div class="container three-columns">
 
     <!-- Parent Form -->
@@ -132,7 +128,7 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.hero, section').forEach(el => observer.observe(el));
 
-  // Formspree async submit with success message
+  // Form submission handling for Formspree
   function handleFormSubmit(formId){
     const form = document.getElementById(formId);
     const successMsg = form.querySelector('.form-success');
@@ -156,9 +152,9 @@
           form.querySelectorAll('input, select').forEach(el => el.disabled = true);
           button.textContent = 'Sent!';
         } else {
-          throw new Error('Submission failed');
+          throw new Error('Form submission failed');
         }
-      } catch (err){
+      } catch (err) {
         successMsg.textContent = 'Oops! Something went wrong. Please try again.';
         successMsg.style.color = 'red';
         successMsg.style.display = 'block';
