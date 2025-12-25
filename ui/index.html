@@ -3,173 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GTA Childcare | Find Trusted Daycare & Babysitters</title>
+
+  <title>Find Trusted Daycares in Toronto & GTA</title>
+  <meta
+          name="description"
+          content="Find licensed home daycares, daycare centers, and babysitters across Toronto & GTA. Local, trusted, and parent-friendly."
+  />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 <header class="hero">
-  <div class="container">
-    <img src="hero.jpg" alt="Happy children playing" class="hero-image" />
-    <h1>Find Trusted Childcare in the GTA</h1>
-    <p class="hero-subtitle">
-      Discover licensed daycares, home daycares, and babysitters near you — built for Ontario families.
-    </p>
+  <div class="container hero-grid">
 
-    <div class="hero-actions">
-      <a href="#parents-form" class="btn btn-primary">Find Childcare</a>
-      <a href="#provider-form" class="btn btn-secondary">List Your Daycare</a>
+    <!-- Left -->
+    <div class="hero-content">
+      <span class="hero-badge">Toronto & GTA</span>
+      <h1>Find Trusted Daycares Near You</h1>
+      <p>
+        Discover licensed home daycares, daycare centers, and babysitters
+        across the GTA — trusted by parents and easy to contact.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#search" class="btn btn-primary">Search Daycares</a>
+        <a href="#provider-form" class="btn btn-outline">
+          List Your Daycare
+        </a>
+      </div>
     </div>
 
-    <p class="hero-note">
-      Launching soon • Early providers receive free featured listings
-    </p>
+    <!-- Right -->
+    <div class="hero-visual">
+      <!-- Replace with your own image or SVG -->
+      <img
+              src="https://undraw.co/api/illustrations/children.svg"
+              alt="Parents searching for daycare in GTA"
+      />
+    </div>
+
   </div>
 </header>
 
-<!-- TRUST STRIP -->
-<section class="trust-strip">
-  <div class="container trust-items">
-    <span>✔ Ontario-focused</span>
-    <span>✔ Licensed & Home Daycare Options</span>
-    <span>✔ Parents Contact Providers Directly</span>
-    <span>✔ No Booking Fees</span>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
+<!-- ================= HOW IT WORKS ================= -->
 <section class="section">
   <div class="container">
-    <h2 class="section-title">How it works</h2>
-    <div class="three-columns">
-      <div class="card">1️⃣ Tell us where you’re looking</div>
-      <div class="card">2️⃣ Get notified at launch</div>
-      <div class="card">3️⃣ Connect with local childcare</div>
+    <h2>How It Works</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Search</h3>
+        <p>Browse daycares by location, type, and availability.</p>
+      </div>
+      <div class="card">
+        <h3>Compare</h3>
+        <p>View details, contact info, and services offered.</p>
+      </div>
+      <div class="card">
+        <h3>Connect</h3>
+        <p>Reach out directly to daycare providers.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PARENTS -->
-<section class="section soft-bg">
+<!-- ================= PROVIDER CTA ================= -->
+<section class="section section-muted" id="provider-form">
   <div class="container">
-    <h2 class="section-title">Finding childcare shouldn’t feel overwhelming</h2>
-    <ul class="feature-list">
-      <li>Search by postal code or city</li>
-      <li>Licensed, home daycare, and babysitter options</li>
-      <li>Clear availability and age groups</li>
-      <li>Local, GTA-only listings</li>
-    </ul>
+    <h2>Are You a Daycare Provider?</h2>
+    <p>
+      List your daycare and connect with parents looking for childcare in your area.
+    </p>
+
+    <a href="#form" class="btn btn-primary">Submit Your Daycare</a>
   </div>
 </section>
 
-<!-- PROVIDERS -->
-<section class="section">
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
   <div class="container">
-    <h2 class="section-title">For childcare providers</h2>
-    <ul class="feature-list">
-      <li>Get discovered by parents actively searching</li>
-      <li>Receive direct inquiries</li>
-      <li>Free early access for launch partners</li>
-      <li>Optional licensed verification badge</li>
-    </ul>
+    <p>© 2025 GTA Childcare. All rights reserved.</p>
   </div>
-</section>
-
-<!-- FORMS -->
-<section class="section soft-bg">
-  <div class="container three-columns">
-
-    <!-- Parent Form -->
-    <form id="parents-form" class="form-card"
-          action="https://formspree.io/f/mkowlkdd" method="POST">
-      <h3>Parents — Get Notified</h3>
-      <label>Name
-        <input type="text" name="name" required />
-      </label>
-      <label>Email
-        <input type="email" name="email" required />
-      </label>
-      <label>Postal Code / Area
-        <input type="text" name="location" />
-      </label>
-      <button type="submit" class="btn btn-primary">Notify Me</button>
-      <p class="form-note">No spam. Unsubscribe anytime.</p>
-      <p class="form-success">Thank you! We'll notify you when we launch.</p>
-    </form>
-
-    <!-- Provider Form -->
-    <form id="provider-form" class="form-card"
-          action="https://formspree.io/f/mkowlkdd" method="POST">
-      <h3>Providers — Early Access</h3>
-      <label>Name
-        <input type="text" name="name" required />
-      </label>
-      <label>Email
-        <input type="email" name="email" required />
-      </label>
-      <label>Role
-        <select name="role">
-          <option value="home_daycare">Home Daycare</option>
-          <option value="licensed_daycare">Licensed Daycare</option>
-          <option value="babysitter">Babysitter</option>
-        </select>
-      </label>
-      <label>Postal Code / Area
-        <input type="text" name="location" />
-      </label>
-      <button type="submit" class="btn btn-primary">Get Early Access</button>
-      <p class="form-note">We’ll reach out before launch.</p>
-      <p class="form-success">Thank you! We'll notify you when we launch.</p>
-    </form>
-
-  </div>
-</section>
-
-<footer>
-  <p>
-    We are a listing and discovery platform only. Parents are encouraged to independently verify providers.
-  </p>
-  <p>© 2025 GTA Childcare</p>
 </footer>
-
-<script>
-  function handleFormSubmit(formId){
-    const form = document.getElementById(formId);
-    const successMsg = form.querySelector('.form-success');
-    const button = form.querySelector('button');
-    const originalText = button.textContent;
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      button.disabled = true;
-      button.textContent = 'Sending...';
-
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if(res.ok){
-          successMsg.style.display = 'block';
-          button.textContent = 'Sent!';
-        } else throw new Error();
-      } catch {
-        successMsg.textContent = 'Something went wrong. Please try again.';
-        successMsg.style.color = 'red';
-        successMsg.style.display = 'block';
-        button.disabled = false;
-        button.textContent = originalText;
-      }
-    });
-  }
-
-  handleFormSubmit('parents-form');
-  handleFormSubmit('provider-form');
-</script>
 
 </body>
 </html>
