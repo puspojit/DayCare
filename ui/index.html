@@ -1,161 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GTA Childcare | Find Daycare & Babysitters</title>
-
-  <meta name="description" content="Find trusted licensed daycares, home daycares, and babysitters across Toronto and the GTA." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- SEO -->
-  <meta property="og:title" content="GTA Childcare" />
-  <meta property="og:description" content="Search daycare & babysitters across Toronto and GTA." />
-  <meta property="og:type" content="website" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<!-- ================= HERO ================= -->
+<!-- HERO SECTION -->
 <header class="hero">
-  <div class="container hero-grid">
-
-    <div class="hero-content">
-      <span class="badge">Toronto & GTA</span>
-
-      <h1>Find Trusted Childcare Near You</h1>
-
-      <p>
-        Discover licensed daycares, home daycares, and babysitters
-        with real availability across the GTA.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#parents" class="btn btn-primary">Find Daycare</a>
-        <a href="#providers" class="btn btn-outline">List Your Daycare</a>
-      </div>
-
-      <small class="note">
-        Launching soon • Early providers get free premium visibility
-      </small>
+  <div class="hero-content">
+    <img src="hero.jpg" alt="Happy children playing">
+    <h1>Trusted Daycare & Babysitters in GTA</h1>
+    <p>Find licensed daycares, home daycares, and babysitters with real availability in Toronto, Brampton, Mississauga & Scarborough.</p>
+    <div class="hero-buttons">
+      <a href="#parents-form" class="btn btn-primary">Find Daycare Near Me</a>
+      <a href="#provider-form" class="btn btn-secondary">List Your Daycare – Free Early Access</a>
     </div>
-
-    <div class="hero-image">
-      <img
-              src="https://illustrations.popsy.co/amber/child-care.svg"
-              alt="Childcare illustration"
-      />
-    </div>
-
+    <span class="small-text">Launching soon • Early providers get premium visibility</span>
   </div>
 </header>
 
-<!-- ================= HOW IT WORKS ================= -->
-<section class="section">
+<!-- PARENTS INFO -->
+<section class="info-section">
   <div class="container">
-    <h2>How It Works</h2>
+    <h2>Finding childcare shouldn’t feel impossible</h2>
+    <ul>
+      <li>Search by postal code or city</li>
+      <li>Filter by licensed or home daycare</li>
+      <li>Find care for infants, toddlers, and preschoolers</li>
+      <li>See providers near your home</li>
+      <li>Clear availability and contact details</li>
+    </ul>
+  </div>
+</section>
 
-    <div class="cards">
+<!-- PROVIDERS INFO -->
+<section class="info-section">
+  <div class="container">
+    <h2>Get discovered by parents actively looking for childcare</h2>
+    <ul>
+      <li>Appear in local search results</li>
+      <li>Receive direct parent inquiries</li>
+      <li>Free early access for early providers</li>
+      <li>Licensed and verified badges (optional)</li>
+      <li>Show real availability to parents</li>
+    </ul>
+    <span class="small-text">No credit card required • Cancel anytime</span>
+  </div>
+</section>
+
+<!-- WHY DIFFERENT -->
+<section class="info-section">
+  <div class="container">
+    <h2>Built specifically for GTA families and childcare providers</h2>
+    <div class="three-columns">
       <div class="card">
-        <h3>Search</h3>
-        <p>Browse childcare options by location and type.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="48" height="48">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7m-7-7v18"/>
+        </svg>
+        <h3>Local First</h3>
+        <p>Focused only on Toronto and surrounding areas — not a generic global directory.</p>
       </div>
-
       <div class="card">
-        <h3>Compare</h3>
-        <p>See details, availability, and contact information.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="48" height="48">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 11h18M5 19h14a2 2 0 002-2V7H3v10a2 2 0 002 2z"/>
+        </svg>
+        <h3>Availability Matters</h3>
+        <p>Providers control their listings so parents don’t waste time on outdated information.</p>
       </div>
-
       <div class="card">
-        <h3>Connect</h3>
-        <p>Reach out directly to daycare providers.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="48" height="48">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l9 4v6c0 5-4 10-9 12-5-2-9-7-9-12V6l9-4z"/>
+        </svg>
+        <h3>Trust & Transparency</h3>
+        <p>Licensed, home daycare, and babysitters are clearly labeled.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= PARENTS FORM ================= -->
-<section class="section section-muted" id="parents">
-  <div class="container narrow">
-    <h2>Parents: Get Notified</h2>
-    <p>We’ll notify you when listings go live in your area.</p>
+<!-- FORMS -->
+<section class="form-section">
+  <div class="container three-columns">
 
-    <form action="https://formspree.io/f/mkowlkdd" method="POST" class="form">
-      <input type="hidden" name="type" value="parent" />
-
-      <label>
-        Name
-        <input type="text" name="name" required />
-      </label>
-
-      <label>
-        Email
-        <input type="email" name="email" required />
-      </label>
-
-      <label>
-        Postal Code / Area
-        <input type="text" name="location" />
-      </label>
-
-      <button class="btn btn-primary" type="submit">
-        Notify Me
-      </button>
+    <!-- Parent Form -->
+    <form id="parents-form" action="https://formspree.io/f/mkowlkdd" method="POST">
+      <h3>Parents: Notify Me</h3>
+      <label>Name:<input type="text" name="name" required></label>
+      <label>Email:<input type="email" name="email" required></label>
+      <label>Postal Code / Area:<input type="text" name="location"></label>
+      <button type="submit" class="btn btn-primary">Notify Me</button>
+      <p class="form-success">Thank you! We'll notify you when we launch.</p>
     </form>
-  </div>
-</section>
 
-<!-- ================= PROVIDERS FORM ================= -->
-<section class="section" id="providers">
-  <div class="container narrow">
-    <h2>Providers: Get Early Access</h2>
-    <p>Get discovered by parents actively searching near you.</p>
-
-    <form action="https://formspree.io/f/mkowlkdd" method="POST" class="form">
-      <input type="hidden" name="type" value="provider" />
-
-      <label>
-        Name
-        <input type="text" name="name" required />
-      </label>
-
-      <label>
-        Email
-        <input type="email" name="email" required />
-      </label>
-
-      <label>
-        Provider Type
+    <!-- Provider Form -->
+    <form id="provider-form" action="https://formspree.io/f/mkowlkdd" method="POST">
+      <h3>Providers: Get Early Access</h3>
+      <label>Name:<input type="text" name="name" required></label>
+      <label>Email:<input type="email" name="email" required></label>
+      <label>Role:
         <select name="role">
-          <option>Home Daycare</option>
-          <option>Licensed Daycare</option>
-          <option>Babysitter</option>
+          <option value="home_daycare">Home Daycare</option>
+          <option value="licensed_daycare">Licensed Daycare</option>
+          <option value="babysitter">Babysitter</option>
         </select>
       </label>
-
-      <label>
-        Postal Code / Area
-        <input type="text" name="location" />
-      </label>
-
-      <button class="btn btn-primary" type="submit">
-        Get Early Access
-      </button>
+      <label>Postal Code / Area:<input type="text" name="location"></label>
+      <button type="submit" class="btn btn-primary">Get Early Access</button>
+      <p class="form-success">Thank you! We'll notify you when we launch.</p>
     </form>
+
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  <div class="container">
-    <p>
-      We are a listing platform only. Parents should independently verify providers.
-    </p>
-    <p>© 2025 GTA Childcare</p>
-  </div>
+<footer>
+  <p>We are a listing and discovery platform only. We do not provide childcare services and encourage parents to independently verify providers.</p>
+  <p>© 2025 GTA Childcare</p>
 </footer>
+
+<script>
+  // Fade in sections when scrolling
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.hero, section').forEach(el => observer.observe(el));
+
+  // Formspree async submit with success message
+  function handleFormSubmit(formId){
+    const form = document.getElementById(formId);
+    const successMsg = form.querySelector('.form-success');
+    const button = form.querySelector('button[type="submit"]');
+    const originalText = button.textContent;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      button.disabled = true;
+      button.textContent = 'Sending...';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if(response.ok){
+          successMsg.style.display = 'block';
+          form.querySelectorAll('input, select').forEach(el => el.disabled = true);
+          button.textContent = 'Sent!';
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (err){
+        successMsg.textContent = 'Oops! Something went wrong. Please try again.';
+        successMsg.style.color = 'red';
+        successMsg.style.display = 'block';
+        button.disabled = false;
+        button.textContent = originalText;
+      }
+    });
+  }
+
+  handleFormSubmit('parents-form');
+  handleFormSubmit('provider-form');
+</script>
 
 </body>
 </html>
