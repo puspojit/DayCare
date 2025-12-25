@@ -2,45 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTA Childcare | Find Daycare & Babysitters</title>
 
-  <title>Find Trusted Daycares in Toronto & GTA</title>
-  <meta
-          name="description"
-          content="Find licensed home daycares, daycare centers, and babysitters across Toronto & GTA. Local, trusted, and parent-friendly."
-  />
+  <meta name="description" content="Find trusted licensed daycares, home daycares, and babysitters across Toronto and the GTA." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <!-- SEO -->
+  <meta property="og:title" content="GTA Childcare" />
+  <meta property="og:description" content="Search daycare & babysitters across Toronto and GTA." />
+  <meta property="og:type" content="website" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/styles.css" />
 </head>
+
 <body>
 
 <!-- ================= HERO ================= -->
 <header class="hero">
   <div class="container hero-grid">
 
-    <!-- Left -->
     <div class="hero-content">
-      <span class="hero-badge">Toronto & GTA</span>
-      <h1>Find Trusted Daycares Near You</h1>
+      <span class="badge">Toronto & GTA</span>
+
+      <h1>Find Trusted Childcare Near You</h1>
+
       <p>
-        Discover licensed home daycares, daycare centers, and babysitters
-        across the GTA — trusted by parents and easy to contact.
+        Discover licensed daycares, home daycares, and babysitters
+        with real availability across the GTA.
       </p>
 
       <div class="hero-actions">
-        <a href="#search" class="btn btn-primary">Search Daycares</a>
-        <a href="#provider-form" class="btn btn-outline">
-          List Your Daycare
-        </a>
+        <a href="#parents" class="btn btn-primary">Find Daycare</a>
+        <a href="#providers" class="btn btn-outline">List Your Daycare</a>
       </div>
+
+      <small class="note">
+        Launching soon • Early providers get free premium visibility
+      </small>
     </div>
 
-    <!-- Right -->
-    <div class="hero-visual">
-      <!-- Replace with your own image or SVG -->
+    <div class="hero-image">
       <img
-              src="https://undraw.co/api/illustrations/children.svg"
-              alt="Parents searching for daycare in GTA"
+              src="https://illustrations.popsy.co/amber/child-care.svg"
+              alt="Childcare illustration"
       />
     </div>
 
@@ -55,12 +60,14 @@
     <div class="cards">
       <div class="card">
         <h3>Search</h3>
-        <p>Browse daycares by location, type, and availability.</p>
+        <p>Browse childcare options by location and type.</p>
       </div>
+
       <div class="card">
         <h3>Compare</h3>
-        <p>View details, contact info, and services offered.</p>
+        <p>See details, availability, and contact information.</p>
       </div>
+
       <div class="card">
         <h3>Connect</h3>
         <p>Reach out directly to daycare providers.</p>
@@ -69,22 +76,84 @@
   </div>
 </section>
 
-<!-- ================= PROVIDER CTA ================= -->
-<section class="section section-muted" id="provider-form">
-  <div class="container">
-    <h2>Are You a Daycare Provider?</h2>
-    <p>
-      List your daycare and connect with parents looking for childcare in your area.
-    </p>
+<!-- ================= PARENTS FORM ================= -->
+<section class="section section-muted" id="parents">
+  <div class="container narrow">
+    <h2>Parents: Get Notified</h2>
+    <p>We’ll notify you when listings go live in your area.</p>
 
-    <a href="#form" class="btn btn-primary">Submit Your Daycare</a>
+    <form action="https://formspree.io/f/mkowlkdd" method="POST" class="form">
+      <input type="hidden" name="type" value="parent" />
+
+      <label>
+        Name
+        <input type="text" name="name" required />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+
+      <label>
+        Postal Code / Area
+        <input type="text" name="location" />
+      </label>
+
+      <button class="btn btn-primary" type="submit">
+        Notify Me
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- ================= PROVIDERS FORM ================= -->
+<section class="section" id="providers">
+  <div class="container narrow">
+    <h2>Providers: Get Early Access</h2>
+    <p>Get discovered by parents actively searching near you.</p>
+
+    <form action="https://formspree.io/f/mkowlkdd" method="POST" class="form">
+      <input type="hidden" name="type" value="provider" />
+
+      <label>
+        Name
+        <input type="text" name="name" required />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+
+      <label>
+        Provider Type
+        <select name="role">
+          <option>Home Daycare</option>
+          <option>Licensed Daycare</option>
+          <option>Babysitter</option>
+        </select>
+      </label>
+
+      <label>
+        Postal Code / Area
+        <input type="text" name="location" />
+      </label>
+
+      <button class="btn btn-primary" type="submit">
+        Get Early Access
+      </button>
+    </form>
   </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="container">
-    <p>© 2025 GTA Childcare. All rights reserved.</p>
+    <p>
+      We are a listing platform only. Parents should independently verify providers.
+    </p>
+    <p>© 2025 GTA Childcare</p>
   </div>
 </footer>
 
