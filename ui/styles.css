@@ -1,204 +1,183 @@
-/* ================================
-   GTA Childcare – WeeWatch Inspired
-   ================================ */
+ :root {
+   --primary: #5b8def;
+   --primary-dark: #4576d8;
+   --bg-soft: #f4f8ff;
+   --text-main: #1f2937;
+   --text-muted: #6b7280;
+ }
 
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
 
-/* ---------- Variables ---------- */
-:root {
-  --primary: #2f80ed;
-  --primary-hover: #256ad9;
-  --primary-soft: #eaf2fd;
-  --background: #f8fbff;
-  --card-bg: #ffffff;
-  --text-dark: #1f2937;
-  --text-light: #6b7280;
-  --border-soft: #e5e7eb;
-}
+ body {
+   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+   color: var(--text-main);
+   background: #ffffff;
+   line-height: 1.7;
+ }
 
-/* ---------- Global ---------- */
-* {
-  box-sizing: border-box;
-}
+ .container {
+   max-width: 1100px;
+   margin: auto;
+   padding: 60px 20px;
+ }
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--background);
-  color: var(--text-dark);
-  line-height: 1.7;
-}
+ .hero {
+   background: linear-gradient(135deg, #eef4ff, #ffffff);
+   text-align: center;
+   padding: 100px 20px;
+ }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
-}
+ .hero-image {
+   max-width: 220px;
+   border-radius: 16px;
+   margin-bottom: 24px;
+ }
 
-h1, h2, h3 {
-  line-height: 1.3;
-}
+ .hero-subtitle {
+   max-width: 680px;
+   margin: 0 auto 30px;
+   color: var(--text-muted);
+   font-size: 1.1rem;
+ }
 
-p {
-  margin-bottom: 1rem;
-}
+ .hero-actions {
+   display: flex;
+   justify-content: center;
+   gap: 16px;
+   flex-wrap: wrap;
+ }
 
-/* ---------- Header ---------- */
-.site-header {
-  background: white;
-  padding: 40px 0;
-  border-bottom: 1px solid var(--border-soft);
-}
+ .hero-note {
+   margin-top: 20px;
+   font-size: 14px;
+   color: var(--text-muted);
+ }
 
-.site-header h1 {
-  margin: 0;
-  font-size: 2.4rem;
-  color: var(--primary);
-}
+ .btn {
+   padding: 14px 26px;
+   border-radius: 999px;
+   font-weight: 600;
+   text-decoration: none;
+   border: none;
+   cursor: pointer;
+   transition: 0.25s;
+ }
 
-.site-header p {
-  margin-top: 8px;
-  color: var(--text-light);
-}
+ .btn-primary {
+   background: var(--primary);
+   color: white;
+ }
 
-/* ---------- Hero ---------- */
-.hero {
-  background: linear-gradient(
-    to bottom,
-    var(--primary-soft),
-    var(--background)
-  );
-  padding: 70px 0;
-}
+ .btn-primary:hover {
+   background: var(--primary-dark);
+ }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 50px;
-  align-items: center;
-}
+ .btn-secondary {
+   background: #eef2ff;
+   color: var(--text-main);
+ }
 
-.hero-text h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
+ .trust-strip {
+   background: #fafafa;
+   border-top: 1px solid #eee;
+   border-bottom: 1px solid #eee;
+ }
 
-.hero-text p {
-  color: var(--text-light);
-  max-width: 520px;
-}
+ .trust-items {
+   display: flex;
+   justify-content: center;
+   gap: 24px;
+   flex-wrap: wrap;
+   font-size: 14px;
+   color: var(--text-muted);
+ }
 
-/* ---------- Features ---------- */
-.features {
-  list-style: none;
-  padding: 0;
-  margin-top: 25px;
-}
+ .section {
+   padding: 80px 0;
+ }
 
-.features li {
-  margin-bottom: 12px;
-  font-weight: 500;
-}
+ .soft-bg {
+   background: var(--bg-soft);
+ }
 
-/* ---------- Card ---------- */
-.card {
-  background: var(--card-bg);
-  padding: 35px;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-}
+ .section-title {
+   text-align: center;
+   margin-bottom: 40px;
+ }
 
-.card h3 {
-  margin-bottom: 20px;
-}
+ .three-columns {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   gap: 30px;
+ }
 
-/* ---------- Forms ---------- */
-label {
-  display: block;
-  font-size: 0.9rem;
-  margin-bottom: 12px;
-}
+ .card {
+   background: white;
+   padding: 30px;
+   border-radius: 20px;
+   text-align: center;
+   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+ }
 
-input {
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid var(--border-soft);
-  margin-top: 6px;
-  font-size: 0.95rem;
-  font-family: inherit;
-}
+ .feature-list {
+   max-width: 700px;
+   margin: auto;
+   padding-left: 20px;
+ }
 
-input:focus {
-  outline: none;
-  border-color: var(--primary);
-}
+ .feature-list li {
+   margin-bottom: 12px;
+ }
 
-/* ---------- Buttons ---------- */
-.btn-primary {
-  width: 100%;
-  background: var(--primary);
-  color: white;
-  padding: 14px;
-  border-radius: 12px;
-  border: none;
-  font-size: 1rem;
-  font-weight: 600;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
+ .form-card {
+   background: white;
+   padding: 36px;
+   border-radius: 24px;
+   box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+ }
 
-.btn-primary:hover {
-  background: var(--primary-hover);
-}
+ label {
+   display: block;
+   margin-bottom: 6px;
+   font-weight: 500;
+ }
 
-/* ---------- How It Works ---------- */
-.how-it-works {
-  padding: 70px 0;
-  background: white;
-  text-align: center;
-}
+ input, select {
+   width: 100%;
+   padding: 14px;
+   margin-bottom: 16px;
+   border-radius: 12px;
+   border: 1px solid #ccc;
+ }
 
-.steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 40px;
-}
+ .form-note {
+   font-size: 13px;
+   color: var(--text-muted);
+   text-align: center;
+   margin-top: 10px;
+ }
 
-.step {
-  padding: 25px;
-  border-radius: 14px;
-  background: var(--background);
-}
+ .form-success {
+   display: none;
+   text-align: center;
+   color: var(--primary);
+   margin-top: 12px;
+   font-weight: 600;
+ }
 
-/* ---------- Footer ---------- */
-.site-footer {
-  background: white;
-  border-top: 1px solid var(--border-soft);
-  padding: 30px 0;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--text-light);
-}
+ footer {
+   text-align: center;
+   padding: 40px 20px;
+   font-size: 14px;
+   color: var(--text-muted);
+ }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .steps {
-    grid-template-columns: 1fr;
-  }
-
-  .site-header h1 {
-    font-size: 2rem;
-  }
-
-  .hero-text h2 {
-    font-size: 1.7rem;
-  }
-}
+ @media (max-width: 768px) {
+   .hero {
+     padding: 70px 20px;
+   }
+ }

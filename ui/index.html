@@ -1,145 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GTA Childcare | Find Daycare & Babysitters</title>
-  <style>
-    * { box-sizing:border-box; margin:0; padding:0; }
-    body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#333; background:#fdfdfd; scroll-behavior: smooth; }
-    h1,h2,h3{color:#222; margin-bottom:15px;}
-    p{margin-bottom:15px;}
-    a{text-decoration:none;}
-    .container{max-width:1100px;margin:auto;padding:40px 20px;}
-    .btn{display:inline-block;padding:14px 24px;border-radius:6px;font-weight:bold;cursor:pointer;transition:0.3s;border:none;text-align:center;}
-    .btn-primary{background:#2b7cff;color:#fff;}
-    .btn-primary:hover{background:#1a5fcc;transform:translateY(-2px);}
-    .btn-secondary{background:#f0f0f0;color:#333;}
-    .btn-secondary:hover{background:#ddd;transform:translateY(-2px);}
-    .hero{background: linear-gradient(135deg,#e0f0ff,#f5f8ff);text-align:center;padding:120px 20px; opacity:0; transform:translateY(20px); transition:1s ease;}
-    .hero.visible{opacity:1; transform:translateY(0);}
-    .hero img{max-width:250px;border-radius:12px;margin-bottom:20px;box-shadow:0 10px 20px rgba(0,0,0,0.1);}
-    .hero h1{font-size:2.8rem;margin-bottom:20px;}
-    .hero p{font-size:1.2rem;max-width:700px;margin:0 auto 25px auto;color:#555;}
-    section{border-bottom:1px solid #eee;padding:60px 0; opacity:0; transform:translateY(20px); transition:1s ease;}
-    section.visible{opacity:1; transform:translateY(0);}
-    ul{padding-left:20px; list-style-type:disc;}
-    .three-columns{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px;}
-    .card{background:#fff;padding:30px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.08);text-align:center;transition:0.3s;}
-    .card:hover{transform:translateY(-5px);box-shadow:0 8px 25px rgba(0,0,0,0.12);}
-    .card svg{margin-bottom:15px;color:#2b7cff;}
-    form{background:#fff;padding:30px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.08);max-width:420px;margin:auto;transition:0.3s;}
-    form:hover{transform:translateY(-2px);}
-    input, select{width:100%; padding:14px;margin-bottom:15px;border-radius:8px;border:1px solid #ccc;transition:0.2s;}
-    input:focus, select:focus{border-color:#2b7cff;outline:none;}
-    label{display:block;margin-bottom:5px;font-weight:500;color:#444;}
-    h3{text-align:center;margin-bottom:20px;}
-    footer{text-align:center;font-size:14px;padding:40px 20px;background:#f5f5f5;color:#555;}
-    .small{font-size:13px;color:#777;margin-top:5px;display:block;text-align:center;}
-    .form-success{display:none;text-align:center;color:#2b7cff;margin-top:15px;font-weight:bold;}
-    @media(max-width:768px){.three-columns{grid-template-columns:1fr;}.hero h1{font-size:2.2rem;}}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTA Childcare | Find Trusted Daycare & Babysitters</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
 <!-- HERO -->
-<div class="hero">
-  <img src="hero.jpg" alt="Happy children playing">
-  <h1>Find Trusted Daycare & Babysitters in GTA</h1>
-  <p>Search licensed daycares, home daycares, and babysitters with real availability in Toronto, Brampton, Mississauga & Scarborough.</p>
-  <a href="#parents-form" class="btn btn-primary">Find Daycare Near Me</a>
-  <a href="#provider-form" class="btn btn-secondary">List Your Daycare – Free Early Access</a>
-  <span class="small">Launching soon • Early providers get premium visibility</span>
-</div>
-
-<!-- PARENTS INFO -->
-<section>
+<header class="hero">
   <div class="container">
-    <h2>Finding childcare shouldn’t feel impossible</h2>
-    <ul>
-      <li>Search by postal code or city</li>
-      <li>Filter by licensed or home daycare</li>
-      <li>Find care for infants, toddlers, and preschoolers</li>
-      <li>See providers near your home</li>
-      <li>Clear availability and contact details</li>
-    </ul>
+    <img src="hero.jpg" alt="Happy children playing" class="hero-image" />
+    <h1>Find Trusted Childcare in the GTA</h1>
+    <p class="hero-subtitle">
+      Discover licensed daycares, home daycares, and babysitters near you — built for Ontario families.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#parents-form" class="btn btn-primary">Find Childcare</a>
+      <a href="#provider-form" class="btn btn-secondary">List Your Daycare</a>
+    </div>
+
+    <p class="hero-note">
+      Launching soon • Early providers receive free featured listings
+    </p>
+  </div>
+</header>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip">
+  <div class="container trust-items">
+    <span>✔ Ontario-focused</span>
+    <span>✔ Licensed & Home Daycare Options</span>
+    <span>✔ Parents Contact Providers Directly</span>
+    <span>✔ No Booking Fees</span>
   </div>
 </section>
 
-<!-- PROVIDERS INFO -->
-<section>
+<!-- HOW IT WORKS -->
+<section class="section">
   <div class="container">
-    <h2>Get discovered by parents actively looking for childcare</h2>
-    <ul>
-      <li>Appear in local search results</li>
-      <li>Receive direct parent inquiries</li>
-      <li>Free early access for early providers</li>
-      <li>Licensed and verified badges (optional)</li>
-      <li>Show real availability to parents</li>
-    </ul>
-    <span class="small">No credit card required • Cancel anytime</span>
-  </div>
-</section>
-
-<!-- WHY DIFFERENT -->
-<section>
-  <div class="container">
-    <h2>Built specifically for GTA families and childcare providers</h2>
+    <h2 class="section-title">How it works</h2>
     <div class="three-columns">
-      <div class="card">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="48" height="48">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7m-7-7v18"/>
-        </svg>
-        <h3>Local First</h3>
-        <p>Focused only on Toronto and surrounding areas — not a generic global directory.</p>
-      </div>
-      <div class="card">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="48" height="48">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 11h18M5 19h14a2 2 0 002-2V7H3v10a2 2 0 002 2z"/>
-        </svg>
-        <h3>Availability Matters</h3>
-        <p>Providers control their listings so parents don’t waste time on outdated information.</p>
-      </div>
-      <div class="card">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="48" height="48">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"/>
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l9 4v6c0 5-4 10-9 12-5-2-9-7-9-12V6l9-4z"/>
-        </svg>
-        <h3>Trust & Transparency</h3>
-        <p>Licensed, home daycare, and babysitters are clearly labeled.</p>
-      </div>
+      <div class="card">1️⃣ Tell us where you’re looking</div>
+      <div class="card">2️⃣ Get notified at launch</div>
+      <div class="card">3️⃣ Connect with local childcare</div>
     </div>
   </div>
 </section>
 
+<!-- PARENTS -->
+<section class="section soft-bg">
+  <div class="container">
+    <h2 class="section-title">Finding childcare shouldn’t feel overwhelming</h2>
+    <ul class="feature-list">
+      <li>Search by postal code or city</li>
+      <li>Licensed, home daycare, and babysitter options</li>
+      <li>Clear availability and age groups</li>
+      <li>Local, GTA-only listings</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROVIDERS -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">For childcare providers</h2>
+    <ul class="feature-list">
+      <li>Get discovered by parents actively searching</li>
+      <li>Receive direct inquiries</li>
+      <li>Free early access for launch partners</li>
+      <li>Optional licensed verification badge</li>
+    </ul>
+  </div>
+</section>
+
 <!-- FORMS -->
-<section>
+<section class="section soft-bg">
   <div class="container three-columns">
 
     <!-- Parent Form -->
-    <form id="parents-form" action="https://formspree.io/f/mkowlkdd" method="POST">
-      <h3>Parents: Notify Me</h3>
-      <label>Name:<input type="text" name="name" required></label>
-      <label>Email:<input type="email" name="email" required></label>
-      <label>Postal Code / Area:<input type="text" name="location"></label>
+    <form id="parents-form" class="form-card"
+          action="https://formspree.io/f/mkowlkdd" method="POST">
+      <h3>Parents — Get Notified</h3>
+      <label>Name
+        <input type="text" name="name" required />
+      </label>
+      <label>Email
+        <input type="email" name="email" required />
+      </label>
+      <label>Postal Code / Area
+        <input type="text" name="location" />
+      </label>
       <button type="submit" class="btn btn-primary">Notify Me</button>
+      <p class="form-note">No spam. Unsubscribe anytime.</p>
       <p class="form-success">Thank you! We'll notify you when we launch.</p>
     </form>
 
     <!-- Provider Form -->
-    <form id="provider-form" action="https://formspree.io/f/mkowlkdd" method="POST">
-      <h3>Providers: Get Early Access</h3>
-      <label>Name:<input type="text" name="name" required></label>
-      <label>Email:<input type="email" name="email" required></label>
-      <label>Role:
+    <form id="provider-form" class="form-card"
+          action="https://formspree.io/f/mkowlkdd" method="POST">
+      <h3>Providers — Early Access</h3>
+      <label>Name
+        <input type="text" name="name" required />
+      </label>
+      <label>Email
+        <input type="email" name="email" required />
+      </label>
+      <label>Role
         <select name="role">
           <option value="home_daycare">Home Daycare</option>
           <option value="licensed_daycare">Licensed Daycare</option>
           <option value="babysitter">Babysitter</option>
         </select>
       </label>
-      <label>Postal Code / Area:<input type="text" name="location"></label>
+      <label>Postal Code / Area
+        <input type="text" name="location" />
+      </label>
       <button type="submit" class="btn btn-primary">Get Early Access</button>
+      <p class="form-note">We’ll reach out before launch.</p>
       <p class="form-success">Thank you! We'll notify you when we launch.</p>
     </form>
 
@@ -147,51 +128,37 @@
 </section>
 
 <footer>
-  <p>We are a listing and discovery platform only. We do not provide childcare services and encourage parents to independently verify providers.</p>
+  <p>
+    We are a listing and discovery platform only. Parents are encouraged to independently verify providers.
+  </p>
   <p>© 2025 GTA Childcare</p>
 </footer>
 
 <script>
-  // Fade in sections when scrolling
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.hero, section').forEach(el => observer.observe(el));
-
-  // Handle form submit: Actually send to Formspree, then show success
   function handleFormSubmit(formId){
     const form = document.getElementById(formId);
     const successMsg = form.querySelector('.form-success');
-    const button = form.querySelector('button[type="submit"]');
+    const button = form.querySelector('button');
     const originalText = button.textContent;
 
     form.addEventListener('submit', async (e) => {
-      e.preventDefault();  // Prevent default to handle manually
-
-      // Show loading state
+      e.preventDefault();
       button.disabled = true;
       button.textContent = 'Sending...';
 
       try {
-        const response = await fetch(form.action, {
+        const res = await fetch(form.action, {
           method: 'POST',
           body: new FormData(form),
           headers: { 'Accept': 'application/json' }
         });
 
-        if (response.ok) {
+        if(res.ok){
           successMsg.style.display = 'block';
-          form.querySelectorAll('input, select').forEach(el => el.disabled = true);
           button.textContent = 'Sent!';
-        } else {
-          throw new Error('Submission failed');
-        }
-      } catch (error) {
-        successMsg.textContent = 'Oops! Something went wrong. Please try again or email us directly.';
+        } else throw new Error();
+      } catch {
+        successMsg.textContent = 'Something went wrong. Please try again.';
         successMsg.style.color = 'red';
         successMsg.style.display = 'block';
         button.disabled = false;
