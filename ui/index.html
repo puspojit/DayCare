@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>GTA Childcare | Find Daycare & Babysitters</title>
-  <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="Discover licensed daycares, home daycares, and babysitters in GTA. Easy search, verified providers, and early access for childcare providers.">
+
+  <meta
+          name="description"
+          content="Discover licensed daycares, home daycares, and babysitters in GTA. Easy search, verified providers, and early access for childcare providers."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
 <!-- HERO SECTION -->
@@ -14,15 +21,32 @@
   <div class="hero-content container">
     <div class="hero-text">
       <h1>Find Trusted Daycare & Babysitters in GTA</h1>
-      <p>Search licensed daycares, home daycares, and babysitters with real availability in Toronto, Brampton, Mississauga & Scarborough.</p>
+      <p>
+        Search licensed daycares, home daycares, and babysitters with real
+        availability in Toronto, Brampton, Mississauga & Scarborough.
+      </p>
+
       <div class="hero-buttons">
         <a href="#parents-form" class="btn btn-primary">Find Daycare Near Me</a>
-        <a href="#provider-form" class="btn btn-secondary">List Your Daycare – Free Early Access</a>
+        <a href="#provider-form" class="btn btn-secondary">
+          List Your Daycare – Free Early Access
+        </a>
       </div>
-      <span class="small-text">Launching soon • Early providers get premium visibility</span>
+
+      <!-- TRUST SIGNALS -->
+      <div class="trust-signals">
+        <span>🇨🇦 GTA-focused</span>
+        <span>🔒 No spam</span>
+        <span>🧸 Verified providers</span>
+      </div>
+
+      <span class="small-text">
+        Launching soon • Early providers get premium visibility
+      </span>
     </div>
+
     <div class="hero-image">
-      <img src="hero.jpg" alt="Happy children playing">
+      <img src="hero.jpg" alt="Happy children playing" loading="lazy" />
     </div>
   </div>
 </section>
@@ -56,111 +80,224 @@
   </div>
 </section>
 
-<!-- WHY DIFFERENT CARDS -->
+<!-- WHY DIFFERENT -->
 <section class="cards-section">
   <div class="container three-columns">
     <div class="card">
       <h3>Local First</h3>
-      <p>Focused only on Toronto and surrounding areas — not a generic global directory.</p>
+      <p>
+        Focused only on Toronto and surrounding areas — not a generic global
+        directory.
+      </p>
     </div>
     <div class="card">
       <h3>Availability Matters</h3>
-      <p>Providers control their listings so parents don’t waste time on outdated information.</p>
+      <p>
+        Providers control their listings so parents don’t waste time on outdated
+        information.
+      </p>
     </div>
     <div class="card">
       <h3>Trust & Transparency</h3>
-      <p>Licensed, home daycare, and babysitters are clearly labeled for parents to choose confidently.</p>
+      <p>
+        Licensed, home daycare, and babysitters are clearly labeled for parents
+        to choose confidently.
+      </p>
     </div>
   </div>
 </section>
 
-<!-- FORMS SECTION -->
+<!-- FORMS -->
 <section class="forms-section">
   <div class="container two-forms">
 
-    <!-- Parent Form -->
-    <form id="parents-form" action="https://formspree.io/f/mkowlkdd" method="POST">
+    <!-- PARENT FORM -->
+    <form
+            id="parents-form"
+            action="https://formspree.io/f/mkowlkdd"
+            method="POST"
+            novalidate
+    >
       <h3>Parents: Notify Me</h3>
-      <label>Name:<input type="text" name="name" required></label>
-      <label>Email:<input type="email" name="email" required></label>
-      <label>Postal Code / Area:<input type="text" name="location"></label>
+
+      <input type="hidden" name="form_type" value="parent" />
+
+      <div class="form-group">
+        <label for="parent-name">Name</label>
+        <input
+                id="parent-name"
+                type="text"
+                name="name"
+                required
+                autocomplete="name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="parent-email">Email</label>
+        <input
+                id="parent-email"
+                type="email"
+                name="email"
+                required
+                autocomplete="email"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="parent-location">Postal Code / Area</label>
+        <input
+                id="parent-location"
+                type="text"
+                name="location"
+                placeholder="M5V 3L9"
+                pattern="[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d"
+                autocomplete="postal-code"
+        />
+      </div>
+
       <button type="submit" class="btn btn-primary">Notify Me</button>
-      <p class="form-success">Thank you! We'll notify you when we launch.</p>
+
+      <p class="form-success" aria-live="polite" hidden>
+        Thank you! We'll notify you when we launch.
+      </p>
     </form>
 
-    <!-- Provider Form -->
-    <form id="provider-form" action="https://formspree.io/f/mkowlkdd" method="POST">
+    <!-- PROVIDER FORM -->
+    <form
+            id="provider-form"
+            action="https://formspree.io/f/mkowlkdd"
+            method="POST"
+            novalidate
+    >
       <h3>Providers: Get Early Access</h3>
-      <label>Name:<input type="text" name="name" required></label>
-      <label>Email:<input type="email" name="email" required></label>
-      <label>Role:
-        <select name="role">
+
+      <input type="hidden" name="form_type" value="provider" />
+
+      <div class="form-group">
+        <label for="provider-name">Name</label>
+        <input
+                id="provider-name"
+                type="text"
+                name="name"
+                required
+                autocomplete="name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="provider-email">Email</label>
+        <input
+                id="provider-email"
+                type="email"
+                name="email"
+                required
+                autocomplete="email"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="provider-role">Role</label>
+        <select id="provider-role" name="role">
           <option value="home_daycare">Home Daycare</option>
           <option value="licensed_daycare">Licensed Daycare</option>
           <option value="babysitter">Babysitter</option>
         </select>
-      </label>
-      <label>Postal Code / Area:<input type="text" name="location"></label>
-      <button type="submit" class="btn btn-primary">Get Early Access</button>
-      <p class="form-success">Thank you! We'll notify you when we launch.</p>
+      </div>
+
+      <div class="form-group">
+        <label for="provider-location">Postal Code / Area</label>
+        <input
+                id="provider-location"
+                type="text"
+                name="location"
+                placeholder="M5V 3L9"
+                pattern="[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d"
+                autocomplete="postal-code"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        Get Early Access
+      </button>
+
+      <p class="form-success" aria-live="polite" hidden>
+        Thank you! We'll notify you when we launch.
+      </p>
     </form>
 
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="container">
-    <p>We are a listing and discovery platform only. We do not provide childcare services and encourage parents to independently verify providers.</p>
+    <p class="small-text">
+      Your information is used only to notify you about launch updates.
+    </p>
+    <p>
+      We are a listing and discovery platform only. We do not provide childcare
+      services and encourage parents to independently verify providers.
+    </p>
     <p>© 2025 GTA Childcare</p>
   </div>
 </footer>
 
 <script>
   // Fade-in on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting) entry.target.classList.add('visible');
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('section, .hero').forEach(el => observer.observe(el));
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll("section").forEach((el) => observer.observe(el));
 
   // Formspree handling
-  function handleFormSubmit(formId){
+  function handleFormSubmit(formId) {
     const form = document.getElementById(formId);
-    const successMsg = form.querySelector('.form-success');
+    const successMsg = form.querySelector(".form-success");
     const button = form.querySelector('button[type="submit"]');
     const originalText = button.textContent;
 
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       button.disabled = true;
-      button.textContent = 'Sending...';
+      button.textContent = "Sending...";
 
       try {
         const response = await fetch(form.action, {
-          method: 'POST',
+          method: "POST",
           body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
+          headers: { Accept: "application/json" },
         });
-        if(response.ok){
-          successMsg.style.display = 'block';
-          form.querySelectorAll('input, select').forEach(el => el.disabled = true);
-          button.textContent = 'Sent!';
+
+        if (response.ok) {
+          successMsg.hidden = false;
+          form
+            .querySelectorAll("input, select")
+            .forEach((el) => (el.disabled = true));
+          button.textContent = "Sent!";
         } else {
-          throw new Error('Submission failed');
+          throw new Error("Submission failed");
         }
-      } catch(err){
-        successMsg.style.color = 'red';
-        successMsg.textContent = 'Oops! Something went wrong.';
-        successMsg.style.display = 'block';
+      } catch (err) {
+        successMsg.hidden = false;
+        successMsg.style.color = "red";
+        successMsg.textContent = "Oops! Something went wrong.";
         button.disabled = false;
         button.textContent = originalText;
       }
     });
   }
 
-  handleFormSubmit('parents-form');
-  handleFormSubmit('provider-form');
+  handleFormSubmit("parents-form");
+  handleFormSubmit("provider-form");
 </script>
 
 </body>
