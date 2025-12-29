@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GTA Childcare | Find Daycare & Babysitters</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="description" content="Discover licensed daycares, home daycares, and babysitters in GTA. Easy search, verified providers, and early access for childcare providers.">
 
-  <meta
-          name="description"
-          content="Discover licensed daycares, home daycares, and babysitters in GTA. Easy search, verified providers, and early access for childcare providers."
-  />
-
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="GTA Childcare | Trusted Daycare & Babysitters" />
+  <meta property="og:description" content="Search licensed daycares and babysitters in Greater Toronto Area. Sign up for launch updates!" />
+  <meta property="og:image" content="https://daycare-8l4.pages.dev/hero.jpg" />
+  <meta property="og:url" content="https://daycare-8l4.pages.dev/" />
+  <meta name="twitter:card" content="summary_large_image" />
 </head>
-
 <body>
 
 <!-- HERO SECTION -->
@@ -21,32 +22,20 @@
   <div class="hero-content container">
     <div class="hero-text">
       <h1>Find Trusted Daycare & Babysitters in GTA</h1>
-      <p>
-        Search licensed daycares, home daycares, and babysitters with real
-        availability in Toronto, Brampton, Mississauga & Scarborough.
-      </p>
-
+      <p>Search licensed daycares, home daycares, and babysitters with real availability in Toronto, Brampton, Mississauga & Scarborough.</p>
       <div class="hero-buttons">
         <a href="#parents-form" class="btn btn-primary">Find Daycare Near Me</a>
-        <a href="#provider-form" class="btn btn-secondary">
-          List Your Daycare – Free Early Access
-        </a>
+        <a href="#provider-form" class="btn btn-secondary">List Your Daycare – Free Early Access</a>
       </div>
-
-      <!-- TRUST SIGNALS -->
       <div class="trust-signals">
-        <span>🇨🇦 GTA-focused</span>
-        <span>🔒 No spam</span>
-        <span>🧸 Verified providers</span>
+        <span>GTA-focused</span> •
+        <span>No spam</span> •
+        <span>Verified providers</span>
       </div>
-
-      <span class="small-text">
-        Launching soon • Early providers get premium visibility
-      </span>
+      <span class="small-text">Launching soon • Early providers get premium visibility</span>
     </div>
-
     <div class="hero-image">
-      <img src="hero.jpg" alt="Happy children playing" loading="lazy" />
+      <img src="hero.jpg" alt="Happy children playing at daycare">
     </div>
   </div>
 </section>
@@ -80,213 +69,117 @@
   </div>
 </section>
 
-<!-- WHY DIFFERENT -->
+<!-- WHY DIFFERENT CARDS -->
 <section class="cards-section">
   <div class="container three-columns">
     <div class="card">
       <h3>Local First</h3>
-      <p>
-        Focused only on Toronto and surrounding areas — not a generic global
-        directory.
-      </p>
+      <p>Focused only on Toronto and surrounding areas — not a generic global directory.</p>
     </div>
     <div class="card">
       <h3>Availability Matters</h3>
-      <p>
-        Providers control their listings so parents don’t waste time on outdated
-        information.
-      </p>
+      <p>Providers control their listings so parents don’t waste time on outdated information.</p>
     </div>
     <div class="card">
       <h3>Trust & Transparency</h3>
-      <p>
-        Licensed, home daycare, and babysitters are clearly labeled for parents
-        to choose confidently.
-      </p>
+      <p>Licensed, home daycare, and babysitters are clearly labeled for parents to choose confidently.</p>
     </div>
   </div>
 </section>
 
-<!-- FORMS -->
+<!-- FORMS SECTION -->
 <section class="forms-section">
   <div class="container two-forms">
 
-    <!-- PARENT FORM -->
-    <form
-            id="parents-form"
-            action="https://formspree.io/f/mkowlkdd"
-            method="POST"
-            novalidate
-    >
+    <!-- Parent Form -->
+    <form id="parents-form" action="https://formspree.io/f/mkowlkdd" method="POST" data-role="parent">
       <h3>Parents: Notify Me</h3>
-
-      <input type="hidden" name="form_type" value="parent" />
-
-      <div class="form-group">
-        <label for="parent-name">Name</label>
-        <input
-                id="parent-name"
-                type="text"
-                name="name"
-                required
-                autocomplete="name"
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="parent-email">Email</label>
-        <input
-                id="parent-email"
-                type="email"
-                name="email"
-                required
-                autocomplete="email"
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="parent-location">Postal Code / Area</label>
-        <input
-                id="parent-location"
-                type="text"
-                name="location"
-                placeholder="M5V 3L9"
-                pattern="[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d"
-                autocomplete="postal-code"
-        />
-      </div>
-
+      <label>Name:<input type="text" name="name" required></label>
+      <label>Email:<input type="email" name="email" required></label>
+      <label>Postal Code / Area:<input type="text" name="location"></label>
       <button type="submit" class="btn btn-primary">Notify Me</button>
-
-      <p class="form-success" aria-live="polite" hidden>
-        Thank you! We'll notify you when we launch.
-      </p>
+      <p class="form-success" hidden>Thank you! We'll notify you when we launch.</p>
     </form>
 
-    <!-- PROVIDER FORM -->
-    <form
-            id="provider-form"
-            action="https://formspree.io/f/mkowlkdd"
-            method="POST"
-            novalidate
-    >
+    <!-- Provider Form -->
+    <form id="provider-form" action="https://formspree.io/f/mkowlkdd" method="POST" data-role="provider">
       <h3>Providers: Get Early Access</h3>
-
-      <input type="hidden" name="form_type" value="provider" />
-
-      <div class="form-group">
-        <label for="provider-name">Name</label>
-        <input
-                id="provider-name"
-                type="text"
-                name="name"
-                required
-                autocomplete="name"
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="provider-email">Email</label>
-        <input
-                id="provider-email"
-                type="email"
-                name="email"
-                required
-                autocomplete="email"
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="provider-role">Role</label>
-        <select id="provider-role" name="role">
+      <label>Name:<input type="text" name="name" required></label>
+      <label>Email:<input type="email" name="email" required></label>
+      <label>Role:
+        <select name="role">
           <option value="home_daycare">Home Daycare</option>
           <option value="licensed_daycare">Licensed Daycare</option>
           <option value="babysitter">Babysitter</option>
         </select>
-      </div>
-
-      <div class="form-group">
-        <label for="provider-location">Postal Code / Area</label>
-        <input
-                id="provider-location"
-                type="text"
-                name="location"
-                placeholder="M5V 3L9"
-                pattern="[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d"
-                autocomplete="postal-code"
-        />
-      </div>
-
-      <button type="submit" class="btn btn-primary">
-        Get Early Access
-      </button>
-
-      <p class="form-success" aria-live="polite" hidden>
-        Thank you! We'll notify you when we launch.
-      </p>
+      </label>
+      <label>Postal Code / Area:<input type="text" name="location"></label>
+      <button type="submit" class="btn btn-primary">Get Early Access</button>
+      <p class="form-success" hidden>Thank you! We'll notify you when we launch.</p>
     </form>
 
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
-    <p class="small-text">
-      Your information is used only to notify you about launch updates.
-    </p>
-    <p>
-      We are a listing and discovery platform only. We do not provide childcare
-      services and encourage parents to independently verify providers.
-    </p>
+    <p>We are a listing and discovery platform only. We do not provide childcare services and encourage parents to independently verify providers.</p>
     <p>© 2025 GTA Childcare</p>
   </div>
 </footer>
 
 <script>
   // Fade-in on scroll
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('section, .hero').forEach(el => observer.observe(el));
 
-  document.querySelectorAll("section").forEach((el) => observer.observe(el));
-
-  // Formspree handling
-  function handleFormSubmit(formId) {
+  // Handle both forms with serverless email + Formspree
+  async function handleFormSubmit(formId) {
     const form = document.getElementById(formId);
     const successMsg = form.querySelector(".form-success");
     const button = form.querySelector('button[type="submit"]');
     const originalText = button.textContent;
+    const role = form.dataset.role; // parent or provider
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       button.disabled = true;
       button.textContent = "Sending...";
 
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+      payload.role = role; // send role to serverless function
+
       try {
-        const response = await fetch(form.action, {
+        // 1️⃣ Send confirmation email via serverless function
+        const emailResp = await fetch("/api/sendConfirmationEmail", {
           method: "POST",
-          body: new FormData(form),
-          headers: { Accept: "application/json" },
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
         });
 
-        if (response.ok) {
-          successMsg.hidden = false;
-          form
-            .querySelectorAll("input, select")
-            .forEach((el) => (el.disabled = true));
-          button.textContent = "Sent!";
-        } else {
-          throw new Error("Submission failed");
-        }
+        if (!emailResp.ok) throw new Error("Email sending failed");
+
+        // 2️⃣ Submit data to Formspree
+        const fsResp = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: { Accept: "application/json" }
+        });
+
+        if (!fsResp.ok) throw new Error("Formspree submission failed");
+
+        // 3️⃣ Show success message
+        successMsg.hidden = false;
+        form.querySelectorAll("input, select, button").forEach(el => el.disabled = true);
+        button.textContent = "Sent!";
+
       } catch (err) {
+        console.error(err);
         successMsg.hidden = false;
         successMsg.style.color = "red";
         successMsg.textContent = "Oops! Something went wrong.";
@@ -296,6 +189,7 @@
     });
   }
 
+  // Initialize forms
   handleFormSubmit("parents-form");
   handleFormSubmit("provider-form");
 </script>
